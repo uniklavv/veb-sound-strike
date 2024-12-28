@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'InterMedium';
+  src: url(../fonts/Inter-Medium.otf)
+}
+
+@font-face {
+  font-family: 'InterBold';
+  src: url(../fonts/Inter-Bold.otf);
+}

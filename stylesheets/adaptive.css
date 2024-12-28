@@ -1,0 +1,66 @@
+@media screen and (min-width: 1921px) {
+  
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+  .whiteblock p {
+    font-size: 5vw;
+  }
+
+  .firsttext {
+    font-size: 2vw;
+  }
+  .secondtext {
+    font-size: 1.6vw;
+  }
+
+  .forplaying img {
+    width: 5%;
+}
+
+.withus img {
+  width: 5%;
+}
+
+.moscow img {
+  width: 5%;
+}
+.moscowimg1 {
+  margin: -5% 0 0 30%;
+}
+}
+
+
+@media screen and (max-width: 415px) {
+  .whiteblock p {
+    font-size: 5vw;
+  }
+
+  .firsttext {
+    font-size: 2vw;
+  }
+  .secondtext {
+    font-size: 1.6vw;
+  }
+
+  .forplaying img {
+    width: 5%;
+}
+
+.withus img {
+  width: 5%;
+}
+
+.moscow img {
+  width: 5%;
+}
+.moscowimg1 {
+  margin: -5% 0 0 30%;
+}
+
+}
+

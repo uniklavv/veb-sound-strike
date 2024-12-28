@@ -1,0 +1,873 @@
+*{
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  cursor: url(../images/cursor.svg), auto;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: url(../images/cursor.svg), auto;
+}
+
+.firstsection {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 54vw 46vw;
+  grid-template-rows: 22.9vw 33.1vw;
+  height: 50vw;
+}
+
+.block1 {
+  background: url(../images/cubes.svg);
+  background-size: 122%;
+}
+.block2 {
+  background-color: #FFB2DB;
+  grid-row: span 2;
+}
+.block3 {
+  background-color: #93B6EE;
+}
+
+.block3 img {
+  width: 52vw;
+  margin-left: 2%;
+  animation: skew 3s linear infinite;
+}
+
+@keyframes skew {
+  0% {transform: scaleX(1);}
+  50% {transform: scaleX(0.2);}
+  100% {transform: scaleX(1);}
+}
+
+.runningrow {
+  width: 46vw;
+  height: 16.7vw;
+  margin-left: 3%;
+  background: url(../images/running.svg);
+  background-size: 131vw 17.7vw;
+  background-repeat: no-repeat;
+  animation: run 1s linear infinite;
+}
+
+@keyframes run {
+  0% {background-position-x: 100%;}
+  100% {background-position-x: 61%;}
+}
+
+.headers {
+  height: 37.9vw;
+  width: 46vw;
+  background: url(../images/header.svg);
+  background-size: 38.4vw 32vw;
+  background-repeat: no-repeat;
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+.balls {
+  width: 100vw;
+  height: 17.8vw;
+  background-color: #FFB2DB;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  margin-top: 6%;
+}
+
+.ballbutton {
+  width: 100%;
+  height: 17.8vw;
+}
+
+button {
+  opacity: 0;
+  z-index: 4;
+}
+
+.ballbutton:hover ~ .ball {
+  animation-play-state: running;
+}
+
+.ball {
+  width: 17.6vw;
+  height: 17.6vw;
+  position: absolute;
+  animation-play-state: paused;
+}
+
+.ball1 {
+  animation: rolling1 3s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.ball2 {
+  margin-left: 35%;
+  animation: rolling4 3s ease-in-out infinite; 
+  animation-play-state: paused;
+}
+.ball3 {
+  margin-left: 57%;
+  animation: rolling2 3s ease-in-out infinite; 
+  animation-play-state: paused;
+}
+.ball4 {
+  margin-left: 74%;
+  animation: rolling3 3s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.ball5 {
+  margin-left: 18%;
+animation: rolling5 3s ease-in-out infinite;
+animation-play-state: paused;
+}
+
+@keyframes rolling1 {
+    0% {transform: rotate(-0deg);    left: 0%;}
+    50% {transform: rotate(180deg);  left: -45%;}
+    100% {transform: rotate(360deg); left: 0%;}
+}
+
+@keyframes rolling2 {
+  0% {transform: rotate(-0deg);    left: 0%;}
+  50% {transform: rotate(180deg);  left: 23%;}
+  100% {transform: rotate(360deg); left: 0%;}
+}
+
+@keyframes rolling3 {
+  0% {transform: rotate(-0deg);    left: 0%;}
+  50% {transform: rotate(180deg);  left: 30%;}
+  100% {transform: rotate(360deg); left: 0%;}
+}
+
+@keyframes rolling4 {
+  0% {transform: rotate(-0deg);    left: 0%;}
+  50% {transform: rotate(180deg);  left: 20%;}
+  100% {transform: rotate(360deg); left: 0%;}
+}
+
+@keyframes rolling5 {
+  0% {transform: rotate(-0deg);    left: 0%;}
+  50% {transform: rotate(180deg);  left: -20%;}
+  100% {transform: rotate(360deg); left: 0%;}
+}
+
+
+.secondsection {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 60vw 40vw;
+  grid-template-rows: 21vw 25vw 24.9vw;
+  height: 49vw;
+}
+
+.secondsecblock1 {
+  font-family: 'InterMedium';
+  grid-row: span 2;
+  background-color: white;
+  background-image: url(../images/record.svg);
+  background-repeat: no-repeat;
+  background-size: 43.5vw;
+  background-position: 50% 40%;
+}
+
+.secondsectextblock {
+  display: flex;
+  justify-content: space-between;
+  margin: 66% 2% 0% 2%;
+  color: #2E2B2B;
+}
+
+.secondsecblock1 img {
+  width: 9vw;
+  height: 9vw;
+  position: absolute;
+}
+
+.pinkball {
+  margin: -27% 0% 0% 26%;
+  animation: pinkball 5s linear infinite;
+}
+
+@keyframes pinkball {
+  from {transform: rotate(0deg) translateX(21vw) rotate(0deg);}
+  to   {transform: rotate(-360deg) translateX(21vw) rotate(360deg);}
+}
+
+@keyframes blueball {
+  from {transform: rotate(0deg) translateX(21vw) rotate(0deg);}
+  to   {transform: rotate(360deg) translateX(21vw) rotate(-360deg);}
+}
+
+.blueball {
+  margin: -27% 0% 0% 26%;
+  animation: blueball 5s linear infinite;
+}
+
+.firsttext {
+  font-size: 1.5vw;
+}
+
+.secondtext {
+  font-size: 1.2vw;
+  margin-top: 6%;
+}
+
+.secondsecblock2 {
+  background-color: #93B6EE;
+  display: flex;
+  justify-content: center;
+}
+
+.secondsecblock2 img {
+  width: 6.5vw;
+  height: 6.5vw;
+  position: absolute;
+  margin-top: 7%;
+}
+
+.rollingball {
+  animation: rollingballs 3s linear infinite;
+}
+
+@keyframes rollingballs {
+  from {transform: rotate(0deg) translateX(7vw) rotate(0deg);}
+  to   {transform: rotate(360deg) translateX(7vw) rotate(-360deg);}
+}
+
+.rollingball2 {
+  animation-delay: 0.5s;
+}
+
+.rollingball3 {
+  animation-delay: 1s;
+}
+
+.rollingball4 {
+  animation-delay: 1.5s;
+}
+
+.rollingball5 {
+  animation-delay: 2s;
+}
+
+.rollingball6 {
+  animation-delay: 2.5s;
+}
+
+.secondsecblock3 {  
+  background-color: #FFB2DB;
+  grid-row: span 2;
+  font-family: 'InterBold';
+  font-size: 8vw;
+  color: white;
+  padding-left: 3%;
+  padding-top: 1%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gfthp {
+  line-height: 112%;
+}
+
+.whiteblock {
+  position: absolute;
+  background-color: #FFB2DB;
+  width: 40vw;
+  height: 50vw;
+  margin: -113% 0% 0% -3%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 2.7vw;
+  font-family: 'InterBold';
+  text-align: center;
+}
+
+.whiteblock p {
+  margin-top: 50%;
+}
+
+.whiteblock:hover {
+  transition: 1s;
+  opacity: 0;
+}
+
+.secondsecblock3 img {
+  width: 10vw;
+  height: 10vw;
+  opacity: 0;
+  position: absolute;
+}
+
+.whiteball1 {
+  animation: fallingball 5s linear infinite;
+}
+
+@keyframes fallingball {
+  0% { top: -40%; left: 10%;}
+  5% {opacity: 100%;}
+  100% { top:  120%;  left: 10%; rotate: 30deg; opacity: 100%;}
+}
+
+.whiteball2 {
+  animation: fallingball2 5s linear infinite;
+  animation-delay: 0.15s;
+}
+
+@keyframes fallingball2 {
+  0% { top: -100%; left: 30%;}
+  5% {opacity: 100%;}
+  100% { top:  120%;  left: 30%; rotate: -360deg; opacity: 100%;}
+}
+
+.whiteball3 {
+  animation: fallingball3 5s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes fallingball3 {
+  0% { top: -250%; left: 80%;}
+  5% {opacity: 100%;}
+  100% { top:  120%;  left: 80%; rotate: 200deg; opacity: 100%;}
+}
+
+.whiteball4 {
+  animation: fallingball4 5s linear infinite;
+  animation-delay: 3s;
+}
+
+@keyframes fallingball4 {
+  0% { top: -150%; left: 85%;}
+  5% {opacity: 100%;}
+  100% { top:  120%;  left: 85%; rotate: -360deg; opacity: 100%;}
+}
+
+.whiteball5 {
+  animation: fallingball5 5s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes fallingball5 {
+  0% { top: -70%; left: 60%;}
+  5% {opacity: 100%;}
+  100% { top:  120%;  left: 60%; rotate: 300deg; opacity: 100%;}
+}
+
+.whiteball6 {
+  animation: fallingball6 5s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes fallingball6 {
+  0% { top: -160%; left: -2%;}
+  5% {opacity: 100%;}
+  100% { top:  120%;  left: -2%; rotate: 320deg; opacity: 100%;}
+}
+
+.secondsecblock4 {
+  background-color: #93B6EE;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.star1, .star2 {
+  width: 20vw;
+  height: 20vw;
+  animation: spin 3s linear infinite;
+}
+
+.arrow {
+  width: 13vw;
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.thirdsection {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 34vw 26vw 40vw;
+  grid-template-rows: 27vw 27vw 27vw;
+  height: 81vw;
+  margin-top: 22.1%;
+}
+
+.thirdblock1 {
+  background-color: #FFB2DB;
+  font-family: 'InterMedium';
+}
+
+.thirdblock1 img {
+  width: 77%;
+  rotate: 70deg;
+  margin-left: -10%;
+  margin-top: 1.5%;
+}
+
+.ssm1 {
+  margin-left: 48%;
+  margin-top: -75%;
+}
+
+.thirdblock2 {
+  background-color: white;
+  grid-row: span 2;
+}
+
+.thirdblock2 img {
+  width: 63%;
+  margin-left: 18%;
+  margin-top: 1%;
+}
+
+.thirdblock3 {
+  background-color: white;
+  grid-row: span 2;
+  background-image: url(../images/cubes2.svg);
+  background-repeat: no-repeat;
+  background-size: 170%;
+}
+
+.thirdblock4 {
+  background-color: #BFBB68;
+  font-family: 'InterMedium';
+}
+
+.thirdblock4 img {
+  width: 77%;
+  margin-top: 1.5%;
+  margin-left: 23%;
+}
+
+.ssm2 {
+  margin-left: 6%;
+  margin-top: -75%;
+}
+
+.thirdblock5 {
+  background-color: #5C83CE;
+  font-family: 'InterMedium';
+}
+
+.thirdblock5 img {
+  width: 77%;
+  margin-left: -13%;
+  margin-top: 1.5%;
+}
+
+.ssm3 {
+  margin-left: 46%;
+  margin-top: -75%;
+}
+
+.thirdblock6 {
+  background-color: #FF7E9A;
+  grid-column: span 2;
+  position: relative;
+  overflow: hidden;
+}
+
+.pinksheet {
+  position: absolute;
+  z-index: 4;
+  width: 34vw;
+  height: 27vw;
+  background-color: #FF80C4;
+  font-family: 'InterBold';
+  color: #FFB2DB;
+  font-size: 11vw;
+}
+
+.pinksheet p {
+  position: absolute;
+}
+
+.pinksheet:hover {
+  opacity: 0%;
+  transition: 1s;
+}
+
+.greensheet {
+  position: absolute;
+  width: 34vw;
+  height: 27vw;
+  background-color: #BFBB68;
+  color: #E6E179;
+  font-family: 'InterBold';
+  font-size: 11vw;
+}
+
+.greensheet:hover {
+  opacity: 0%;
+  transition: 1s;
+}
+
+.bluesheet {
+  position: absolute;
+  width: 34vw;
+  height: 27vw;
+  background-color: #5C83CE;
+  color: #93B6EE;
+  font-family: 'InterBold';
+  font-size: 11vw;
+}
+
+.bluesheet p {
+  position: absolute;
+}
+
+.greensheet p {
+  position: absolute;
+}
+
+.s1 {
+  margin: 0% 0 0 7%;
+  rotate: 24deg;
+}
+
+.o {
+  margin: 12% 0 0 36%;
+  rotate: 21deg;
+}
+
+.u {
+  margin: 43% 0 0 3%;
+  rotate: 7deg;
+}
+
+.n1 {
+  margin: 11% 0 0 66%;
+  rotate: 14deg;
+}
+
+.d {
+  margin: 48% 0 0 43%;
+  rotate: -23deg;
+}
+
+.s {
+  margin: 6% 0 0 10%;
+  rotate: 21deg;
+}
+
+.t {
+  margin: 16% 0 0 60%;
+  rotate: 21deg;
+}
+
+.r {
+  margin: 46% 0 0 37%;
+  rotate: -28deg;
+}
+
+.i {
+  margin: 8% 0 0 19%;
+  rotate: -26deg;
+}
+
+.k {
+  margin: 13% 0 0 48%;
+  rotate: -26deg;
+}
+
+.e {
+  margin: 46% 0 0 51%;
+  rotate: 28deg;
+}
+
+
+.bluesheet:hover {
+  opacity: 0%;
+  transition: 1s;
+}
+
+.billcover {
+  width: 66vw;
+  height: 27vw;
+  position: absolute;
+  background-color: #FF7E9A;
+  color: white;
+  font-family: 'InterBold';
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+}
+
+.billcover p {
+  margin-top: 20%;
+}
+
+.billcover:hover {
+  opacity: 0;
+  transition: 1s;
+}
+
+.kii {
+  position: absolute;
+  width: 55vw;
+  margin: 35% 0 0 61%;
+  rotate: 25deg;
+}
+
+.hole1, .hole2, .hole3, .hole4, .hole5, .hole6 {
+  position: absolute;
+  width: 5.6vw;
+}
+
+.hole1 {
+  margin: 36% 0 0 -3%;
+}
+
+.hole2 {
+  margin: -3% 0 0 -3%;
+}
+
+.hole3 {
+  margin: 36% 0 0 94%;
+}
+
+.hole4 {
+  margin: -3% 0 0 94%;
+}
+.hole5 {
+  margin: 36% 0 0 47%;
+}
+.hole6 {
+  margin: -3% 0 0 47%;
+}
+
+.billball {
+  width: 6vw;
+  position: absolute;
+}
+
+.billball1 {
+  margin: 16% 0 0 50%;
+  animation: rolling 2.5s linear infinite;
+}
+
+.billball2 {
+  margin: 21% 0 0 46%;
+  animation: rolling2 2.4s linear infinite;
+}
+
+
+.billball3 {
+  margin: 30% 0 0 37%;
+  animation: rolling 2.2s linear infinite;
+}
+
+
+.billball4 {
+  margin: 12% 0 0 38%;
+  animation: rolling2 1.7s linear infinite;
+}
+
+
+.billball5 {
+  margin: 17.4% 0 0 34%;
+  animation: rolling 1.8s linear infinite;
+}
+
+
+.billball6 {
+  margin: -5.1% 0 0 20%;
+  animation: rolling2 2.1s linear infinite;
+}
+
+
+.billball7 {
+  margin: 18.9% 0 0 40.4%;
+  animation: rolling 1.9s linear infinite;
+}
+
+.billball8 {
+  margin: 14% 0 0 44%;
+  animation: rolling2 2.3s linear infinite;
+}
+
+.billball9 {
+  margin: 36% 0 0 -3.6%;
+  animation: rolling 2s linear infinite;
+}
+
+.billball10 {
+  margin: 23.5% 0 0 35.9%;
+  animation: rolling2 2.1s linear infinite;
+}
+
+.billball11 {
+  margin: 7% 0 0 5.5%;
+  animation: rolling2 1.7s linear infinite;
+}
+
+
+.billball12 {
+  margin: 30.4% 0 0 21%;
+  animation: rolling 1.8s linear infinite;
+}
+
+
+.billball13 {
+  margin: 19.9% 0 0 14%;
+  animation: rolling2 2.1s linear infinite;
+}
+
+
+.billball14 {
+  margin: 18.9% 0 0 40.4%;
+  animation: rolling 1.9s linear infinite;
+}
+
+.billball15 {
+  margin: 11.5% 0 0 31.5%;
+  animation: rolling2 2.3s linear infinite;
+}
+
+.billball16 {
+  margin: 26% 0 0 42%;
+  animation: rolling 2s linear infinite;
+}
+
+.billball17 {
+  margin: 11% 0 0 21%;
+  animation: rolling 2s linear infinite;
+}
+
+.lastsection {
+  font-family: 'InterBold';
+  color: white;
+  background-color: #FFB2DB;
+  width: 100vw;
+  height: 73vw;
+  font-size: 13.5vw;
+  letter-spacing: -0.07em;
+  padding-top: 4%;
+}
+
+.textblock {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+.secondp {
+  margin-left: 10%;
+}
+
+.lastp {
+  margin-left: 33%;
+}
+
+.forplaying {
+  display: flex;
+}
+
+.forplaying img {
+  position: absolute;
+  width: 4%;
+  animation: rolling 1s linear infinite;
+}
+
+@keyframes rolling {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.forplayingimg1 {
+  margin: 12% 0 0 0;
+}
+
+.forplayingimg2 {
+  margin: 6% 0 0 83%;
+  }
+
+.withus {
+  display: flex;
+  margin-left: 33%;
+}
+
+.withus img {
+  position: absolute;
+  width: 4%;
+  animation: rolling2 1s linear infinite;
+}
+
+@keyframes rolling2 {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-360deg);}
+}
+
+.withusimg1 {
+  margin: 11% 0 0 2%;
+}
+
+.withusimg2 {
+  margin: 5.5% 0 0 41%;
+}
+
+.firstp {
+  margin-left: 7%;
+}
+
+.secondp2 {
+  margin-left: 7%;
+}
+
+.blockglass {
+  display: flex;
+}
+
+.glass {
+  width: 13%;
+  margin-left: 16%;
+}
+
+.glassball1, .glassball2 {
+  position: absolute;
+  width: 4%;
+  animation: rolling 1s linear infinite;
+}
+
+.glassball1 {
+  margin: 1% 0 0 27%;
+}
+
+.glassball2 {
+  margin: 23% 0 0 6%;
+}
+
+.moscow img {
+  position: absolute;
+  width: 4%;
+  animation: rolling2 1s linear infinite;
+}
+
+.moscowimg1 {
+  margin: -4% 0 0 30%;
+}
+
+.moscowimg2 {
+  margin: -14% 0 0 36.5%;
+}
+
+.moscowimg3 {
+  margin: -16% 0 0 80%;
+}
+
+.moscowimg4 {
+  margin: -6% 0 0 92%;
+}
+
+.textblock p:hover {
+  opacity: 0;
+  transition: 1s;
+}
